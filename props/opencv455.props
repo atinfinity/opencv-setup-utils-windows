@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OPENCV_INSTALL_DIR>C:\dev\opencv-4.5.5\build\install</OPENCV_INSTALL_DIR>
+  </PropertyGroup>
+  <!-- Debug|x64 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OPENCV_INSTALL_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories Condition="'$(VisualStudioVersion)'=='16.0'">$(OPENCV_INSTALL_DIR)\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(VisualStudioVersion)'=='17.0'">$(OPENCV_INSTALL_DIR)\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_calib3d455d.lib;opencv_core455d.lib;opencv_dnn455d.lib;opencv_features2d455d.lib;opencv_flann455d.lib;opencv_gapi455d.lib;opencv_highgui455d.lib;opencv_imgcodecs455d.lib;opencv_imgproc455d.lib;opencv_ml455d.lib;opencv_objdetect455d.lib;opencv_photo455d.lib;opencv_stitching455d.lib;opencv_video455d.lib;opencv_videoio455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Release|x64 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OPENCV_INSTALL_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories Condition="'$(VisualStudioVersion)'=='16.0'">$(OPENCV_INSTALL_DIR)\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(VisualStudioVersion)'=='17.0'">$(OPENCV_INSTALL_DIR)\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_calib3d455.lib;opencv_core455.lib;opencv_dnn455.lib;opencv_features2d455.lib;opencv_flann455.lib;opencv_gapi455.lib;opencv_highgui455.lib;opencv_imgcodecs455.lib;opencv_imgproc455.lib;opencv_ml455.lib;opencv_objdetect455.lib;opencv_photo455.lib;opencv_stitching455.lib;opencv_video455.lib;opencv_videoio455.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
